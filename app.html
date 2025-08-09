@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boa Filha</title>
+  <link rel="icon" href="img/ico.fw.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <div class="card">
+    <img src="img/logo.fw.png" alt="Boa Filha Logo" class="icon">
+    <p>Aplicativo para registrar e acompanhar o comportamento da sua filha.</p>
+    <canvas id="gaugeChart" width="180" height="180" style="display: block;"></canvas>
+    <div id="pontuacao-container">
+      <span id="pontuacao" style="color: rgb(255, 235, 59);">...</span>
+    </div>
+    <div>
+      <button class="bom" onclick="alterarPontuacao(1)">Bom comportamento</button>
+      <button class="mau" onclick="alterarPontuacao(-1)">Mau comportamento</button>
+      
+      <button class="sair" onclick="logout()">Sair</button>
+      <p>Bem-vindo, <span id="nomeUsuario">Usuário</span>!</p>
+      <button id="especialButton" style="display: none;">Acessar Log</button>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="log.js" defer></script>
+
+</body>
+</html>

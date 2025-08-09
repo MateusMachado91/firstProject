@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | Boa Filha</title>
+  <link rel="icon" href="img/ico.fw.png" type="image/png">
+  <link rel="stylesheet" href="cadastroStyle.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="classValidaCPF.js"></script>
+  <script type="module" src="cadastro.js"></script>
+</head>
+<body>
+  <form id="form-cadastro">
+    <h1>Formulário de cadastro</h1>
+    <li>Nenhum campo pode estar vazio</li>
+    <li>Usuário só poderá ter entre 3 e 12 caracteres</li>
+    <li>Senha precisa ter entre 6 e 12 caracteres</li>
+
+    <div class="input-group">
+      <h4>Nome:</h4>
+      <input type="text" id="nome" placeholder="Digite Seu Nome..." />
+    </div>
+    <div class="input-group">
+      <h4>Sobrenome:</h4>
+      <input type="text" id="sobrenome" placeholder="Digite Seu Sobrenome..." />
+    </div>
+    <div class="input-group">
+      <h4>CPF:</h4>
+      <input type="text" id="cpfInput" placeholder="Digite o CPF" />
+      
+    </div>
+    <div class="input-group">
+      <h4>Email:</h4>
+      <input type="email" id="email" placeholder="Digite Seu Email...">
+    </div>
+    <div class="input-group">
+      <h4>Senha:</h4>
+      <input type="password" id="senha" placeholder="Digite Sua Senha..." />
+    </div>
+    <div class="input-group">
+      <h4>Repetir Senha:</h4>
+      <input type="password" id="repsenha" placeholder="Digite Sua Senha..." />
+    </div>
+
+    <span id="cpfStatus"></span>
+
+    <button type="submit" id="submitButton">Enviar</button>
+    <div id="result"></div>
+
+    <div class="voltar-container">
+      <button id="btn-voltar">Voltar para login</button>
+    </div>
+
+  </form>
+</body>
+</html>

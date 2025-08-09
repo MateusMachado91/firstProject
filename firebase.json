@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "public": ".",
+    "type": "module",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/log.html",
+        "destination": "/log.html"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
