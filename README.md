@@ -35,8 +35,32 @@ Como Usar
 
   - Acompanhe a evolução no saldo de pontos.
 
+
+--------------------------    RealTime DataBase Rules   -----------------------------------
+
+{
+  "rules": {
+    "pontuacaoGlobal": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "logs": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    "usuarios": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    },
+    // Permite leitura e escrita sem autenticação para testes
+    ".read": "auth == null",  // Permite leitura se o usuário NÃO estiver autenticado
+    
+  }
+}
+
 Objetivo
 
   - Esse projeto foi criado como ferramenta pessoal para acompanhamento do comportamento da minha filha,
   -  mas também serve como exemplo de aplicação com autenticação, cadastro e manipulação de dados.
+
 
